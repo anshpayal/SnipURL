@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -17,6 +18,15 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        primary: "#000000",
+        secondary: "#00f6ff",
+        dimWhite: "rgba(255, 255, 255, 0.7)",
+        dimBlue: "rgba(9, 151, 124, 0.1)",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
