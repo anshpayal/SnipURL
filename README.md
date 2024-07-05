@@ -8,7 +8,8 @@
     3. To connect react app with supabase `connect` -> `App Framework` select React and Vite -> Copy the given code from `utils/supabase.ts`.
     4. Create a src/db/supabase.js file and paste the copied code. 
     5. Create tables.
-- Install react router dom library. 
+- Install react router dom library.
+- Install "yup" library for input validation and "react-spinners" for loading spinner. 
 
 
 
