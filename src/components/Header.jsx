@@ -14,35 +14,35 @@ import Logo from "../snipurl-logo.png";
 
 const Header = () => {
   const navigate = useNavigate();
-  const user = false;
+  const user = true;
   return (
     <header className=" h-[75px] flex items-center justify-between sm:px-16 px-6 ">
       <Link to="/">
       <span className="flex justify-center items-center ">
         <img src={Logo} className=" w-[50px] h-[40px] mr-2"/>
-        <p className=" tracking-wide py-10 text-white font-poppins font-semibold text-[16px] sm:text-[20px]">SNIP | URL </p>
+        <p className=" tracking-wide py-10 font-poppins font-semibold text-[16px] sm:text-[20px]">SNIP | URL </p>
       </span>
       </Link>
       <div>
         {
           user ? (
             <DropdownMenu>
-              <DropdownMenuTrigger className="outline-none mt-2 ">
+              <DropdownMenuTrigger className="outline-none mt-2">
                 <Avatar>
                   <AvatarImage src="https://github.com/shadcn.png" />
                   <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="mt-4 sm:mr-0 mr-4">
-                <DropdownMenuLabel>Ansh Payal</DropdownMenuLabel>
+                <DropdownMenuLabel className="text-black">Ansh Payal</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
-                  <LinkIcon className="w-4 h-4 mr-2" />
-                  <span>Links</span>
+                  <LinkIcon color="black" className="w-4 h-4 mr-2"/>
+                  <span className="text-black">Links</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem className="text-red-400">
-                  <LogOut className="w-4 h-4 mr-2" />
-                  <span>Logout</span>
+                  <LogOut color="#ef4444" className="w-4 h-4 mr-2" />
+                  <span className="text-red-500">Logout</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

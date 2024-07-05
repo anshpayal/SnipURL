@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import {
@@ -8,23 +9,34 @@ import {
 } from "@/components/ui/accordion"
 import FeatureCard from "@/components/FeatureCard"
 import { AreaChart, Link2, QrCode, ShieldCheck } from "lucide-react"
+import { useNavigate } from "react-router-dom"
 
 const Landing = () => {
+  const [longUrl, setLongUrl] = useState("");
+  const navigate = useNavigate();
+  const handleSubmitForm = (e)=>{
+    e.preventDefault();
+    if(longUrl) navigate(`/auth?createNew=${longUrl}`);
+  }
   return (
     <main className=" flex flex-col items-center">
-      <div className="mt-12 mb-14 w-full text-center text-white font-poppins">
+      <div className="mt-12 mb-14 w-full text-center font-poppins">
         <h1 className=" text-3xl sm:text-5xl font-bold ">SHORTEN & ANALYSE</h1>
         <div className=" w-10/12 sm:w-5/12 h-0.5 mt-1 bg-slate-600 mx-auto"></div>
         <br />
         <h2 className=" text-2xl sm:text-4xl "> Your URLs Quickly and Easily</h2>
       </div>
       <div className=" w-10/12 sm:w-6/12">
-        <form className="flex flex-col sm:flex-row gap-2">
-          <Input type="url" placeholder="Enter your long URL" />
+        <form onSubmit={handleSubmitForm} className="flex flex-col sm:flex-row gap-2">
+          <Input 
+            type="url"
+            value={longUrl} 
+            placeholder="Enter your long URL" 
+            onChange={(e)=>{setLongUrl(e.target.value)}}/>
           <Button className="" variant="destructive">Shorten Url</Button>
         </form>
       </div>
-      <div className="w-full p-12 sm:p-16  text-white">
+      <div className="w-full p-12 sm:p-16">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
 
           <FeatureCard
@@ -50,7 +62,7 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="text-white w-full my-10 sm:my-20">
+      <div className="w-full my-10 sm:my-20">
         <h1 className="text-3xl font-semibold text-center">Frequently Asked Questions</h1>
         <Accordion type="multiple" collapsible className="w-9/12 mx-auto my-5">
           <AccordionItem value="item-1">
