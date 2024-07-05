@@ -28,12 +28,13 @@ const Landing = () => {
       </div>
       <div className=" w-10/12 sm:w-6/12">
         <form onSubmit={handleSubmitForm} className="flex flex-col sm:flex-row gap-2">
-          <Input 
+          <Input
+            className="text-black" 
             type="url"
             value={longUrl} 
             placeholder="Enter your long URL" 
             onChange={(e)=>{setLongUrl(e.target.value)}}/>
-          <Button className="" variant="destructive">Shorten Url</Button>
+          <Button variant="destructive">Shorten Url</Button>
         </form>
       </div>
       <div className="w-full p-12 sm:p-16">
@@ -64,7 +65,7 @@ const Landing = () => {
 
       <div className="w-full my-10 sm:my-20">
         <h1 className="text-3xl font-semibold text-center">Frequently Asked Questions</h1>
-        <Accordion type="multiple" collapsible className="w-9/12 mx-auto my-5">
+        <Accordion type="multiple" collapsible="true" className="w-9/12 mx-auto my-5">
           <AccordionItem value="item-1">
             <AccordionTrigger>How does SnipUrl Shortener work?</AccordionTrigger>
             <AccordionContent>
