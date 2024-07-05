@@ -10,14 +10,18 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { LinkIcon, LogOut } from "lucide-react"
+import Logo from "../snipurl-logo.png";
 
 const Header = () => {
   const navigate = useNavigate();
-  const user = true;
+  const user = false;
   return (
-    <nav className=" h-[75px] flex items-center justify-between sm:px-16 px-6 border-b border-dimWhite">
+    <header className=" h-[75px] flex items-center justify-between sm:px-16 px-6 ">
       <Link to="/">
-        <p className="py-10 text-white font-poppins font-semibold text-[16px] sm:text-[20px]">SNIP | URL </p>
+      <span className="flex justify-center items-center ">
+        <img src={Logo} className=" w-[50px] h-[40px] mr-2"/>
+        <p className=" tracking-wide py-10 text-white font-poppins font-semibold text-[16px] sm:text-[20px]">SNIP | URL </p>
+      </span>
       </Link>
       <div>
         {
@@ -48,7 +52,7 @@ const Header = () => {
           )
         }
       </div>
-    </nav>
+    </header>
   )
 }
 
