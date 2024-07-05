@@ -50,8 +50,8 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="text-white w-full my-20">
-        <h1 className="text-3xl font-semibold m- text-center">Frequently Asked Questions</h1>
+      <div className="text-white w-full my-10 sm:my-20">
+        <h1 className="text-3xl font-semibold text-center">Frequently Asked Questions</h1>
         <Accordion type="multiple" collapsible className="w-9/12 mx-auto my-5">
           <AccordionItem value="item-1">
             <AccordionTrigger>How does SnipUrl Shortener work?</AccordionTrigger>
@@ -66,7 +66,7 @@ const Landing = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger>What analytics are availabe for shortened URL?</AccordionTrigger>
+            <AccordionTrigger>What analytics are availabe ?</AccordionTrigger>
             <AccordionContent>
               You can view the number of clicks, geolocation data of clicks and device type (mobile/desktop) for each of your shortened URLs.
             </AccordionContent>
