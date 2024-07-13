@@ -9,11 +9,11 @@ const Auth = () => {
 
   return (
     <div className="h-screen flex flex-col items-center">
-      <div className="w-6/12 flex flex-col items-center">
+      <div className=" w-11/12 sm:w-6/12 flex flex-col items-center my-4">
         <h1 className=" text-3xl sm:text-4xl my-6 font-semibold text-center">
           {searchParams.get("createNew") ? "Hold up! Let's Login first" : "Login | Signup"}
         </h1>
-        <Tabs defaultValue="login" className="w-[400px] text-center">
+        <Tabs defaultValue="login" className=" w-11/12 sm:w-[400px] text-center">
           <TabsList className="w-full grid grid-cols-2 bg-slate-200 ">
             <TabsTrigger className="shadow-lg" value="login">Login</TabsTrigger>
             <TabsTrigger value="signup">Signup</TabsTrigger>
