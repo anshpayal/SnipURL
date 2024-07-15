@@ -18,7 +18,7 @@ export async function signup ({name, email, password, profile_pic}){
     const {error:storageError} = await supabase.storage.from("profile_pic").upload(fileName, profile_pic);
     if(storageError) throw new Error(storageError.message);
 
-    const {data,error} = await supabase.auth.signup({
+    const {data,error} = await supabase.auth.signUp({
         email,
         password,
         options:{
