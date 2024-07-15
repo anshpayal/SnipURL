@@ -5,29 +5,32 @@ import Landing from './pages/Landing';
 import Auth from './pages/Auth';
 import Dashborad from './pages/Dashboard';
 import UrlProvider from './Context';
+import PrivateRoute from './components/PrivateRoute';
 
 
 function App() {
 
   const appRouter = createBrowserRouter([
     {
-      element: <AppLayout/>,
-      children:[
+      element: <AppLayout />,
+      children: [
         {
           path: "/",
-          element: <Landing/>
+          element: <Landing />
         },
         {
           path: "/auth",
-          element: <Auth/>
+          element: <Auth />
         },
         {
           path: "/dashboard",
-          element: <Dashborad/>
+          element: <PrivateRoute>
+            <Dashborad />
+          </PrivateRoute>
         }
-      ] 
+      ]
     }
-]);
+  ]);
 
   return (
     <UrlProvider>
