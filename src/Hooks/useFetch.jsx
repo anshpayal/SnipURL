@@ -11,7 +11,7 @@ const useFetch = (cb, options = {}) => {
         try {
             const response = await cb(options, ...args);
             setData(response);
-            console.log(response);
+            //console.log(response);
         } catch (error) {
             setError(error);
         } finally {

@@ -4,6 +4,7 @@ import AppLayout from './layout/AppLayout';
 import Landing from './pages/Landing';
 import Auth from './pages/Auth';
 import Dashborad from './pages/Dashboard';
+import UrlProvider from './Context';
 
 
 function App() {
@@ -29,7 +30,9 @@ function App() {
 ]);
 
   return (
-    <RouterProvider router={appRouter} />
+    <UrlProvider>
+      <RouterProvider router={appRouter} />
+    </UrlProvider>
   )
 }
 
