@@ -53,7 +53,7 @@ const SignupComponent = () => {
                 password: Yup.string()
                 .min(6, 'Password must be at least 6 characters')
                 .required('Password is required'),
-                profile_pic: Yup.mixed().required("Profile pic is required")
+                // profile_pic: Yup.mixed().required("Profile pic is required")
             })
             await schema.validate(formData,{abortEarly:false}); 
             //api call
@@ -79,7 +79,7 @@ const SignupComponent = () => {
                         className="border border-slate-600 text-black"
                         name="name" 
                         type="text" 
-                        placeholder="Enter Name" 
+                        placeholder="Enter Full Name" 
                         onChange={handleInputChange}/>
                     {errors.name && <ErrorMessage message={errors.name}/> }
                 </CardContent>

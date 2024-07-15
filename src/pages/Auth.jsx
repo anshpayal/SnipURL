@@ -21,7 +21,7 @@ const Auth = () => {
 
   return (
     <div className="h-screen flex flex-col items-center">
-      <div className=" w-11/12 sm:w-6/12 flex flex-col items-center my-4">
+      <div className=" w-11/12 sm:w-6/12 flex flex-col items-center ">
         <h1 className=" text-3xl sm:text-4xl my-6 font-semibold text-center">
           {longLink ? "Hold up! Let's Login first" : "Login | Signup"}
         </h1>
