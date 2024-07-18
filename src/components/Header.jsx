@@ -48,8 +48,10 @@ const Header = () => {
                   <DropdownMenuLabel className="text-black">{user?.user_metadata?.name}</DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>
-                    <LinkIcon color="black" className="w-4 h-4 mr-2" />
-                    <span className="text-black">Links</span>
+                    <Link to="/dashboard" className="flex">
+                      <LinkIcon color="black" className="w-4 h-4 mr-2" />
+                      <span className="text-black">Links</span>
+                    </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="text-red-400">
                     <LogOut color="#ef4444" className="w-4 h-4 mr-2" />
