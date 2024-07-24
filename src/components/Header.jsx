@@ -50,7 +50,7 @@ const Header = () => {
                   <DropdownMenuItem>
                     <Link to="/dashboard" className="flex">
                       <LinkIcon color="black" className="w-4 h-4 mr-2" />
-                      <span className="text-black">Links</span>
+                      <span className="text-black"> My Links</span>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="text-red-400">
