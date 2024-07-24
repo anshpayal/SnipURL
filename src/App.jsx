@@ -6,6 +6,8 @@ import Auth from './pages/Auth';
 import Dashborad from './pages/Dashboard';
 import UrlProvider from './Context';
 import PrivateRoute from './components/PrivateRoute';
+import Link from './pages/Link';
+import RedirectLink from './pages/RedirectLink';
 
 
 function App() {
@@ -27,6 +29,18 @@ function App() {
           element: <PrivateRoute>
             <Dashborad />
           </PrivateRoute>
+        },
+        {
+          path:"/link/:id",
+          element: (
+            <PrivateRoute>
+              <Link/>
+            </PrivateRoute>
+          )
+        },
+        {
+          path:"/:id",
+          element:<RedirectLink/>
         }
       ]
     }

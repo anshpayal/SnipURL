@@ -10,6 +10,7 @@ import useFetch from "@/Hooks/useFetch"
 import { getURLs } from "@/db/apiURLs"
 import { getClickForUrls } from "@/db/apiClicks"
 import UrlCard from "@/components/UrlCard"
+import CreateNewUrl from "@/components/CreateNewUrl"
 
 const Dashborad = () => {
   const [searchQurey, setSearchQuery] = useState("");
@@ -55,7 +56,7 @@ const Dashborad = () => {
       </div>
       <div className="flex justify-between items-center p-4">
         <h1 className="text-2xl">My Links</h1>
-        <Button>Create new URL</Button>
+        <CreateNewUrl/>
       </div>
       <div className="p-4 relative">
         <Input
