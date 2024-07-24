@@ -10,7 +10,8 @@
     5. Create tables.
 - Install react router dom library.
 - Install "yup" library for input validation and "react-spinners" for loading spinner. 
-- Using "react-qrcode-logo" to generate QR code. 
+- Using "react-qrcode-logo" to generate QR code.
+- Install "ua-parser-js" it is used to detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data
 
 
 
