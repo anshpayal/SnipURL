@@ -1,4 +1,5 @@
-import { getLongUrl, storeClicks } from "@/db/apiURLs";
+import { storeClicks } from "@/db/apiClicks";
+import { getLongUrl } from "@/db/apiURLs";
 import useFetch from "@/Hooks/useFetch";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom"

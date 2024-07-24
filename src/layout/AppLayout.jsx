@@ -6,8 +6,10 @@ const AppLayout = () => {
   return (
     <div className="bg-primary w-full min-h-screen overflow-hidden">
       <Header />
-      <Outlet />
-      <Footer/>
+      <div className="min-h-[100vh]">
+        <Outlet />
+      </div>
+      <Footer />
     </div>
   )
 }

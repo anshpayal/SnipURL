@@ -70,7 +70,7 @@ const CreateNewUrl = () => {
       <DialogTrigger>
         <Button>Create New URL</Button>
       </DialogTrigger>
-      <DialogContent className="bg-slate-900 border-slate-900 w-11/12 sm:max-w-md">
+      <DialogContent className="bg-slate-700 border-slate-700 w-11/12 sm:max-w-md">
         <DialogHeader className="text-left">
           <DialogTitle className="font-normal text-xl ">Create New Short URL</DialogTitle>
         </DialogHeader>

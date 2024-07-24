@@ -64,7 +64,7 @@ const Landing = () => {
       </div>
 
       <div className="w-full my-10 sm:my-20">
-        <h1 className="text-3xl font-semibold text-center">Frequently Asked Questions</h1>
+        <h1 className="text-3xl font-semibold text-center p-1">Frequently Asked Questions</h1>
         <Accordion type="multiple" collapsible="true" className="w-9/12 mx-auto my-5">
           <AccordionItem value="item-1">
             <AccordionTrigger>How does SnipUrl Shortener work?</AccordionTrigger>
