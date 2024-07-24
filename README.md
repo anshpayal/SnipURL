@@ -10,6 +10,7 @@
     5. Create tables.
 - Install react router dom library.
 - Install "yup" library for input validation and "react-spinners" for loading spinner. 
+- Using "react-qrcode-logo" to generate QR code. 
 
 
 
