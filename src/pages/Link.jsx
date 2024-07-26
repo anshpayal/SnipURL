@@ -6,8 +6,8 @@ import useFetch from "@/Hooks/useFetch";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom"
 import { BarLoader, BeatLoader } from "react-spinners";
-import { Calendar, Check, Copy, Download, Laptop, LinkIcon, LocateFixedIcon, MapPin, MousePointerClickIcon, Trash2 } from "lucide-react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Calendar, Check, Copy, Download, Laptop, Link2, LinkIcon, MapPin, Mouse, Scissors, Trash2 } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import LocationStats from "@/components/LocationStats";
 import DeviceStats from "@/components/DeviceStats";
 
@@ -71,19 +71,21 @@ const Link = () => {
           <h1 className="font-semibold text-3xl">{url?.title}</h1>
           <span className="sm:text-[20px]">
             <a
-              className="tracking-wide text-blue-400 hover:underline cursor-pointer"
+              className="tracking-wide text-blue-400 hover:underline cursor-pointer flex items-center gap-2"
               href={`https://snipurl.com/${url?.short_url}`}
               target="_blank" >
-              https://snipurl.com/{url?.short_url}
+                <Scissors/>
+                https://snipurl.com/{url?.short_url}
             </a>
           </span>
           {url?.custom_url && (
-            <span>
+            <span className="sm:text-[20px]">
               <a
-                className="tracking-wide text-blue-400 hover:underline cursor-pointer"
+                className="tracking-wide hover:underline cursor-pointer  flex items-center gap-2"
                 href={`https://snipurl.com/${url.custom_url}`}
                 target="_blank">
-                https://snipurl.com/{url.custom_url}
+                  <Link2/>
+                  https://snipurl.com/{url.custom_url}
               </a>
             </span>
           )}
@@ -127,7 +129,7 @@ const Link = () => {
                 <Card className="bg-black border-slate-600 ">
                   <CardHeader>
                     <CardTitle className=" font-normal text-[16px] sm:text-2xl tracking-wide flex items-center gap-2">
-                      <span><MousePointerClickIcon /></span>
+                      <span><Mouse/></span>
                       <span>Total Clicks</span>
                     </CardTitle>
                   </CardHeader>

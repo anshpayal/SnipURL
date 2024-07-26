@@ -1,9 +1,8 @@
 import { BarLoader } from "react-spinners"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useEffect, useState } from "react"
-import { Filter, Link, MousePointerClickIcon } from "lucide-react"
+import { Filter, Link, Mouse,} from "lucide-react"
 import { UrlState } from "@/Context"
 import ErrorMessage from "@/components/ErrorMessage"
 import useFetch from "@/Hooks/useFetch"
@@ -37,7 +36,7 @@ const Dashborad = () => {
     <div className="flex flex-col gap-3 sm:mx-16">
       {loading || loadingClicks && <BarLoader width={"100%"} color="#475569" />}
       <div className="p-4 grid grid-cols-2 gap-4">
-        <Card className="bg-black border-slate-600 shadow-md shadow-slate-600">
+        <Card className="bg-black border-2 border-slate-600 shadow-md shadow-slate-600">
           <CardHeader>
             <CardTitle className=" font-normal tracking-wide text-[16px] sm:text-2xl flex items-center gap-2"><span><Link/></span>LINKS CREATED</CardTitle>
           </CardHeader>
@@ -45,10 +44,10 @@ const Dashborad = () => {
             <p className="text-xl">{urls?.length}</p>
           </CardContent>
         </Card>
-        <Card className="bg-black border-slate-600 shadow-md shadow-slate-600">
+        <Card className="bg-black border-2 border-slate-600 shadow-md shadow-slate-600">
           <CardHeader>
             <CardTitle className=" font-normal text-[16px] sm:text-2xl tracking-wide flex items-center gap-2">
-              <span><MousePointerClickIcon/></span>
+              <span><Mouse/></span>
               TOTAL CLICKS
             </CardTitle>
           </CardHeader>

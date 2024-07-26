@@ -41,7 +41,7 @@ const UrlCard = ({ url, fetchUrl }) => {
     const { loading: loadingDelete, fetchData: fnDelete } = useFetch(deleteUrl, url?.id);
 
     return (
-        <div className="flex flex-col md:flex-row gap-5 p-4 m-4 border border-slate-700 shadow-lg shadow-slate-600 rounded-lg">
+        <div className="flex flex-col md:flex-row gap-5 p-4 m-4 border-2 border-slate-700 shadow-lg shadow-slate-600 rounded-lg">
             <img
                 className="h-32 object-contain ring ring-blue self-start"
                 src={url?.qr} alt="QR code" />
