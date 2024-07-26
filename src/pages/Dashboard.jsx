@@ -12,7 +12,8 @@ import UrlCard from "@/components/UrlCard"
 import CreateNewUrl from "@/components/CreateNewUrl"
 
 const Dashborad = () => {
-  const [searchQurey, setSearchQuery] = useState("");
+  const [searchQurey, setSearchQuery] = useState();
+  const [filteredUrls, setFilteredUrls] = useState();
 
   const { user } = UrlState();
   const { data: urls, loading, error, fetchData: fnUrls } = useFetch(getURLs, user?.id);
@@ -28,9 +29,22 @@ const Dashborad = () => {
     }
   }, [urls?.length]);
 
-  const filteredUrls = urls?.filter((url) => {
-    url.title.toLowerCase().includes(searchQurey.toLowerCase());
-  })
+  useEffect(() => {
+    setFilteredUrls(urls);
+  }, [urls]);
+  
+  const handleFilter = ()=>{
+    const filtered = urls?.filter((url) => {
+        return url?.title.toLowerCase().includes(searchQurey.toLowerCase());
+      });
+      setFilteredUrls(filtered);
+  }
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleFilter();
+    }
+  }
 
   return (
     <div className="flex flex-col gap-3 sm:mx-16">
@@ -66,12 +80,13 @@ const Dashborad = () => {
           type="text"
           placeholder="Filter Links..."
           value={searchQurey}
-          onChange={(e) => { setSearchQuery(e.target.value) }} />
-        <Filter className="absolute top-6 right-6" color="black" />
+          onChange={(e) => { setSearchQuery(e.target.value) }} 
+          onKeyPress={handleKeyPress}/>
+        <Filter className="absolute top-6 right-6" color="black" onClick={handleFilter} />
       </div>
       {error && <ErrorMessage message={error?.message} />}
       {
-        urls?.map((url,i)=> {return <UrlCard key={i} url={url} fetchUrl={fnUrls} />})
+        filteredUrls?.map((url,i)=> {return <UrlCard key={i} url={url} fetchUrl={fnUrls} />})
       }
     </div>
   )
