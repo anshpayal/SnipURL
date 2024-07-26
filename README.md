@@ -12,6 +12,7 @@
 - Install "yup" library for input validation and "react-spinners" for loading spinner. 
 - Using "react-qrcode-logo" to generate QR code.
 - Install "ua-parser-js" it is used to detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data
+- For Line graph and pie chart we are using "recharts" library
 
 
 
