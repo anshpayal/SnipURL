@@ -40,6 +40,8 @@ const LoginComponent = () => {
         }
     },[data,error]);
 
+
+
     const handleLogin = async ()=>{
         setErrors([]);
         try {
@@ -60,6 +62,12 @@ const LoginComponent = () => {
                 newError[err.path] = err.message;
             })
             setErrors(newError);
+        }
+    }
+
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleLogin();
         }
     }
      return (
@@ -85,7 +93,8 @@ const LoginComponent = () => {
                         name="password" 
                         type="password" 
                         placeholder="password" 
-                        onChange={handleInputChange} />
+                        onChange={handleInputChange} 
+                        onKeyPress={handleKeyPress} />
                     {errors.password && <ErrorMessage message={errors.password}/> }
                 </CardContent>
                 <CardFooter>

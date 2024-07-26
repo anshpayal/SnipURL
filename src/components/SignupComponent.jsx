@@ -66,6 +66,11 @@ const SignupComponent = () => {
             setErrors(newError);
         }
     }
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSignup();
+        }
+    }
      return (
         <div>
             <Card className="">
@@ -111,7 +116,7 @@ const SignupComponent = () => {
                     {errors.profile_pic && <ErrorMessage message={errors.profile_pic}/> }
                 </CardContent>
                 <CardFooter>
-                    <Button className="bg-slate-600" onClick={handleSignup}>
+                    <Button className="bg-slate-600" onClick={handleSignup} onKeyPress={handleKeyPress} >
                         {loading? <BeatLoader size={10} color="#36d7b7" />:"Create Account"}
                     </Button>
                 </CardFooter>
