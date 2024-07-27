@@ -13,16 +13,16 @@ const UrlCard = ({ url, fetchUrl }) => {
 
     const handleCopy = () => {
         navigator.clipboard.writeText(`https://snipurl.com/${url.short_url}`)
-          .then(() => {
-            setCopied(true);
-            setTimeout(() => {
-              setCopied(false);
-            }, 1000); // Revert back to the Copy icon after 1 second
-          })
-          .catch(err => {
-            console.error('Failed to copy: ', err);
-          });
-      };
+            .then(() => {
+                setCopied(true);
+                setTimeout(() => {
+                    setCopied(false);
+                }, 1000); // Revert back to the Copy icon after 1 second
+            })
+            .catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+    };
 
 
     const downloadQR = () => {
@@ -41,31 +41,31 @@ const UrlCard = ({ url, fetchUrl }) => {
     const { loading: loadingDelete, fetchData: fnDelete } = useFetch(deleteUrl, url?.id);
 
     return (
-        <div className="flex flex-col md:flex-row gap-5 p-4 m-4 border-2 border-slate-700 shadow-lg shadow-slate-600 rounded-lg">
+        <div className=" flex flex-col md:flex-row gap-5 p-4 m-4 border-[3px] border-slate-600 rounded-md">
             <img
-                className="h-32 object-contain ring ring-blue self-start"
+                className="h-32 w-32 object-contain ring ring-blue self-start"
                 src={url?.qr} alt="QR code" />
-            <Link to={`/link/${url?.id}`} className="flex flex-col flex-1">
-                <span className="text-2xl font-semibold hover:underline cursor-pointer">
+            <Link to={`/link/${url?.id}`} className="flex flex-col flex-1 min-w-0">
+                <span className="text-2xl font-semibold hover:underline cursor-pointer  whitespace-normal">
                     {url?.title}
                 </span>
-                <span className="text-lg font-semibold text-blue-400 hover:underline cursor-pointer">
+                <span className="text-lg font-semibold text-blue-400 hover:underline cursor-pointer break-words whitespace-normal">
                     https://snipurl.com/{url.custom_url ? url?.custom_url : url?.short_url}
                 </span>
-                <span className="flex font-md items-center gap-1 hover:underline cursor-pointer">
+                <span className=" inline font-md items-center hover:underline cursor-pointer truncate truncate-ellipsis">
                     {url?.original_url}
                 </span>
-                <span className="flex items-end font-extralight text-sm flex-1 gap-2">
+                <span className="flex items-end font-extralight text-sm flex-1 mt-4 gap-2">
                     <Calendar size={18} />
                     {new Date(url?.created_at).toLocaleString()}
                 </span>
             </Link>
-            <div className="flex gap-2">
+            <div className="flex gap-2 self-start">
                 <Button className="bg-slate-700" onClick={handleCopy}>
-                {copied ? <Check size={"18"} /> : <Copy size={"18"} />}
+                    {copied ? <Check size={"18"} /> : <Copy size={"18"} />}
                 </Button>
-                <Button className="bg-slate-700">
-                    <Download size={"18"} onClick={downloadQR} />
+                <Button className="bg-slate-700" onClick={downloadQR}>
+                    <Download size={"18"} />
                 </Button>
                 <Button className="bg-slate-700" onClick={() => { fnDelete().then(() => fetchUrl()) }}>
                     {loadingDelete ? <BeatLoader size={5} color="white" /> : <Trash2 size={"18"} />}

@@ -2,3 +2,12 @@
     font-family: poppins;
     color: white;
 }
+
+.truncate-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.break-all {
+    word-break: break-all;
+  }

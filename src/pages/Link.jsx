@@ -67,7 +67,7 @@ const Link = () => {
         )
       }
       <div className="flex flex-col gap-8 sm:flex-row justify-between my-8 mx-10 sm:mx-16">
-        <div className=" flex flex-col items-start gap-6 p-4 rounded-lg sm:w-2/5 border-2 border-slate-600 shadow-lg shadow-slate-600">
+        <div className=" flex flex-col items-start gap-6 p-4 rounded-md sm:w-2/5 border-[3px] border-slate-600">
           <h1 className="font-semibold text-3xl">{url?.title}</h1>
           <span className="sm:text-[20px]">
             <a
@@ -79,7 +79,7 @@ const Link = () => {
             </a>
           </span>
           {url?.custom_url && (
-            <span className="sm:text-[20px]">
+            <span className="sm:text-[20px] break-all">
               <a
                 className="tracking-wide hover:underline cursor-pointer  flex items-center gap-2"
                 href={`https://snipurl.com/${url.custom_url}`}
@@ -89,12 +89,12 @@ const Link = () => {
               </a>
             </span>
           )}
-          <span className="text-sm">
+          <span className="text-sm break-all">
             <a
               className="flex items-center gap-2 hover:underline"
               href={url?.original_url}
               target="_blank" >
-              <LinkIcon size={14} />
+              <LinkIcon size={19} />
               {url?.original_url}
             </a>
           </span>
@@ -119,7 +119,7 @@ const Link = () => {
             alt="qr code"
           />
         </div>
-        <Card className="bg-black border-2 border-slate-600 shadow-lg shadow-slate-600 sm:w-3/5 rounded-lg">
+        <Card className="bg-black border-[3px] border-slate-600  sm:w-3/5 rounded-md">
           <CardHeader>
             <CardTitle className="font-semibold text-3xl">Analytics</CardTitle>
           </CardHeader>
