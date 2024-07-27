@@ -2,9 +2,9 @@
 It is Full Stack URL shortener web app created using React JS, Supabase, Tailwind CSS and Shadcn UI.
 
 ## Features
-- [x] User Authentication using supabase as backend service.
-- [x] Simple and sleek dashborad where you can see your all URLs with QR code which redirects to original link.
-- [x] Analytics for URLs contains Clicks on URL, Location graph of clicks and Device info. 
+- [x] 🔐User Authentication using supabase as backend service.
+- [x] 💻Simple and sleek dashborad where you can see your all URLs with QR code which redirects to original link.
+- [x] 💹Analytics for URLs contains Clicks on URL, Location graph of clicks and Device info. 
 
 ### Libraries Used
 - Install **shadcn ui library**.
