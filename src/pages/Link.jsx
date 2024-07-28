@@ -72,20 +72,20 @@ const Link = () => {
           <span className="sm:text-[20px]">
             <a
               className="tracking-wide text-blue-400 hover:underline cursor-pointer flex items-center gap-2"
-              href={`https://snipurl.com/${url?.short_url}`}
+              href={`https://snipurl.co/${url?.short_url}`}
               target="_blank" >
                 <Scissors/>
-                https://snipurl.com/{url?.short_url}
+                https://snipurl.co/{url?.short_url}
             </a>
           </span>
           {url?.custom_url && (
             <span className="sm:text-[20px] break-all">
               <a
                 className="tracking-wide hover:underline cursor-pointer  flex items-center gap-2"
-                href={`https://snipurl.com/${url.custom_url}`}
+                href={`https://snipurl.co/${url.custom_url}`}
                 target="_blank">
                   <Link2/>
-                  https://snipurl.com/{url.custom_url}
+                  https://snipurl.co/{url.custom_url}
               </a>
             </span>
           )}

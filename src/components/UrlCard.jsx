@@ -12,7 +12,7 @@ const UrlCard = ({ url, fetchUrl }) => {
     const [copied, setCopied] = useState(false);
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(`https://snipurl.com/${url.short_url}`)
+        navigator.clipboard.writeText(`https://snipurl.co/${url.short_url}`)
             .then(() => {
                 setCopied(true);
                 setTimeout(() => {
@@ -50,7 +50,7 @@ const UrlCard = ({ url, fetchUrl }) => {
                     {url?.title}
                 </span>
                 <span className="text-lg font-semibold text-blue-400 hover:underline cursor-pointer break-words whitespace-normal">
-                    https://snipurl.com/{url.custom_url ? url?.custom_url : url?.short_url}
+                    https://snipurl.co/{url.custom_url ? url?.custom_url : url?.short_url}
                 </span>
                 <span className=" inline font-md items-center hover:underline cursor-pointer truncate truncate-ellipsis">
                     {url?.original_url}
