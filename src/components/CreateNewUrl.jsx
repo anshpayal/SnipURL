@@ -94,7 +94,7 @@ const CreateNewUrl = () => {
         {errors.longlink && <ErrorMessage message={errors.longlink} />}
 
         <div className="flex items-center gap-2">
-          <Card className="p-2 text-sm">snipurl.com</Card> /
+          <Card className="p-2 text-sm">snipurl.co</Card> /
           <Input
             id="customUrl"
             value={formData.customUrl}

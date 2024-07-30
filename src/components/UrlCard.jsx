@@ -17,7 +17,7 @@ const UrlCard = ({ url, fetchUrl }) => {
                 setCopied(true);
                 setTimeout(() => {
                     setCopied(false);
-                }, 1000); // Revert back to the Copy icon after 1 second
+                }, 1000);
             })
             .catch(err => {
                 console.error('Failed to copy: ', err);
