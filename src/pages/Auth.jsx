@@ -22,7 +22,7 @@ const Auth = () => {
   return (
     <div className="h-screen flex flex-col items-center">
       <div className=" w-11/12 sm:w-6/12 flex flex-col items-center ">
-        <h1 className=" text-3xl sm:text-4xl my-6 font-semibold text-center">
+        <h1 className="text-gradient text-3xl sm:text-5xl py-6 font-semibold text-center">
           {longLink ? "Hold up! Let's Login first" : "Login | Signup"}
         </h1>
         <Tabs defaultValue="login" className=" w-11/12 sm:w-[400px] text-center">

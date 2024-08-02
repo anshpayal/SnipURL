@@ -4,9 +4,9 @@ import { Outlet } from "react-router-dom"
 
 const AppLayout = () => {
   return (
-    <div className="bg-primary w-full min-h-screen overflow-hidden">
+    <div className=" w-full min-h-screen overflow-hidden">
       <Header />
-      <div className="min-h-[100vh]">
+      <div className="min-h-[100vh] bg-[#212121]">
         <Outlet />
       </div>
       <Footer />

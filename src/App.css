@@ -1,6 +1,7 @@
 *{
     font-family: poppins;
     color: white;
+    scroll-behavior: smooth;
 }
 
 .truncate-ellipsis {
@@ -10,4 +11,4 @@
 }
 .break-all {
     word-break: break-all;
-  }
+}

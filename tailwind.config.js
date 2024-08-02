@@ -1,5 +1,7 @@
 /* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require('tailwindcss/plugin')
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -57,5 +59,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+  ],
 }

@@ -8,7 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import FeatureCard from "@/components/FeatureCard"
-import { AreaChart, Link2, QrCode, ShieldCheck } from "lucide-react"
+import { AreaChart, Link2, QrCode, ShieldCheck, SparklesIcon } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 
 const Landing = () => {
@@ -21,9 +21,9 @@ const Landing = () => {
   return (
     <main className=" flex flex-col items-center">
       <div className="mt-12 mb-14 w-full text-center font-poppins">
-        <h1 className=" text-3xl sm:text-5xl font-bold ">SHORTEN & ANALYSE</h1>
-        <div className=" w-10/12 sm:w-5/12 h-0.5 mt-1 bg-slate-600 mx-auto"></div>
-        <br />
+        <h1 className=" text-4xl sm:text-6xl font-semibold text-gradient ">SHORTEN & ANALYSE</h1>
+        <div className=" w-10/12 sm:w-5/12 h-0.5 mt-1 bg-violet-500 mx-auto"></div>
+        <br />  
         <h2 className=" text-2xl sm:text-4xl "> Your URLs Quickly and Easily</h2>
       </div>
       <div className=" w-10/12 sm:w-6/12">
@@ -34,7 +34,7 @@ const Landing = () => {
             value={longUrl} 
             placeholder="Enter your long URL" 
             onChange={(e)=>{setLongUrl(e.target.value)}}/>
-          <Button variant="destructive">Shorten Url</Button>
+          <Button variant="" className="btn"><SparklesIcon className="sparkle" size={18}/> Shorten Url</Button>
         </form>
       </div>
       <div className="w-full p-12 sm:p-16">

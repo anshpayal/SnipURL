@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <>
-      <header className=" h-[75px] flex items-center justify-between sm:px-16 px-6 ">
+      <header className=" h-[75px] bg-[#212121] flex items-center justify-between sm:px-16 px-6 ">
         <Link to="/">
           <span className="flex justify-center items-center ">
             <img src={Logo} className=" w-[50px] h-[40px] mr-2" />
