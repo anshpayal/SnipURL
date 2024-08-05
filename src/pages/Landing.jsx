@@ -21,15 +21,14 @@ const Landing = () => {
   return (
     <main className=" flex flex-col items-center">
       <div className="mt-12 mb-14 w-full text-center font-poppins">
-        <h1 className=" text-4xl sm:text-6xl font-semibold text-gradient ">SHORTEN & ANALYSE</h1>
-        <div className=" w-10/12 sm:w-5/12 h-0.5 mt-1 bg-violet-500 mx-auto"></div>
-        <br />  
-        <h2 className=" text-2xl sm:text-4xl "> Your URLs Quickly and Easily</h2>
+        <h1 className=" text-[33px] sm:text-7xl font-semibold text-gradient ">SHORTEN & ANALYSE</h1>
+        <div className=" w-9/12 sm:w-6/12 h-0.5 sm:mt-1 bg-violet-500 mx-auto"></div>  
+        <h2 className=" text-xl sm:text-4xl mt-3 sm:mt-4 "> Your URLs Quickly and Easily</h2>
       </div>
       <div className=" w-10/12 sm:w-6/12">
         <form onSubmit={handleSubmitForm} className="flex flex-col sm:flex-row gap-2">
           <Input
-            className="text-black" 
+            className="text-black focus:outline-gray-600" 
             type="url"
             value={longUrl} 
             placeholder="Enter your long URL" 
@@ -37,7 +36,7 @@ const Landing = () => {
           <Button variant="" className="btn"><SparklesIcon className="sparkle" size={18}/> Shorten Url</Button>
         </form>
       </div>
-      <div className="w-full p-12 sm:p-16">
+      <div className="w-full p-12 sm:p-12">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
 
           <FeatureCard

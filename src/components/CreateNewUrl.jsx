@@ -68,9 +68,9 @@ const CreateNewUrl = () => {
   return (
     <Dialog defaultOpen={longLink} onOpenChange={(res) => { if (!res) setSearchParams({}) }}>
       <DialogTrigger>
-        <Button>Create New URL</Button>
+        <Button className="bg-purple-500 hover:bg-purple-600 text-white">Create New URL</Button>
       </DialogTrigger>
-      <DialogContent className="bg-slate-700 border-slate-700 w-11/12 sm:max-w-md">
+      <DialogContent className="bg-[#171717] border-[#171717] w-11/12 sm:max-w-md">
         <DialogHeader className="text-left">
           <DialogTitle className="font-normal text-2xl ">Create New Short URL</DialogTitle>
         </DialogHeader>

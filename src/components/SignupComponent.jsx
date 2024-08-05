@@ -73,15 +73,15 @@ const SignupComponent = () => {
     }
      return (
         <div>
-            <Card className="">
+            <Card className="flex flex-col w-full max-w-md bg-[#171717] border border-[#171717] text-white">
                 <CardHeader className="text-left">
-                    <CardTitle className="text-black">Signup</CardTitle>
-                    <CardDescription className="text-gray-800">Create a new account if you haven&rsquo;t already</CardDescription>
+                    <CardTitle className="text-purple-400 text-3xl font-semibold text-gradient">Signup</CardTitle>
+                    <CardDescription className="text-gray-300">Create a new account if you haven&rsquo;t already</CardDescription>
                     {error && <ErrorMessage message={error.message}/>}
                 </CardHeader>
                 <CardContent className="text-left">
                     <Input 
-                        className="border border-slate-600 text-black"
+                        className="bg-[#212121] border-gray-600 text-white placeholder-gray-400"
                         name="name" 
                         type="text" 
                         placeholder="Enter Full Name" 
@@ -90,7 +90,7 @@ const SignupComponent = () => {
                 </CardContent>
                 <CardContent className="text-left">
                     <Input 
-                        className="border border-slate-600 text-black"
+                        className="bg-[#212121] border-gray-600 text-white placeholder-gray-400"
                         name="email" 
                         type="email" 
                         placeholder="Enter Email" 
@@ -99,7 +99,7 @@ const SignupComponent = () => {
                 </CardContent>
                 <CardContent className="text-left">
                     <Input 
-                        className="border border-slate-600 text-black"
+                        className="bg-[#212121] border-gray-600 text-white placeholder-gray-400"
                         name="password" 
                         type="password" 
                         placeholder="Enter Password" 
@@ -108,7 +108,7 @@ const SignupComponent = () => {
                 </CardContent>
                 <CardContent className="text-left">
                     <Input 
-                        className="border border-slate-600 text-black"
+                        className="bg-[#212121] border-gray-600 text-white placeholder-gray-400"
                         name="profile_pic" 
                         type="file" 
                         accept="image/*" 
@@ -116,8 +116,9 @@ const SignupComponent = () => {
                     {errors.profile_pic && <ErrorMessage message={errors.profile_pic}/> }
                 </CardContent>
                 <CardFooter>
-                    <Button className="bg-slate-600" onClick={handleSignup} onKeyPress={handleKeyPress} >
-                        {loading? <BeatLoader size={10} color="#36d7b7" />:"Create Account"}
+                    <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline" 
+                    onClick={handleSignup} onKeyPress={handleKeyPress} >
+                        {loading? <BeatLoader size={10} color="#ffffff" />:"Create Account"}
                     </Button>
                 </CardFooter>
             </Card>

@@ -41,15 +41,15 @@ const UrlCard = ({ url, fetchUrl }) => {
     const { loading: loadingDelete, fetchData: fnDelete } = useFetch(deleteUrl, url?.id);
 
     return (
-        <div className=" flex flex-col md:flex-row gap-5 p-4 m-4 border-[3px] border-slate-600 rounded-md">
+        <div className=" card border-[#212121] flex flex-col md:flex-row gap-5 p-4 m-4 ">
             <img
-                className="h-32 w-32 object-contain ring ring-blue self-start"
+                className="h-32 w-32 object-contain ring ring-violet-500 self-start"
                 src={url?.qr} alt="QR code" />
             <Link to={`/link/${url?.id}`} className="flex flex-col flex-1 min-w-0">
                 <span className="text-2xl font-semibold hover:underline cursor-pointer  whitespace-normal">
                     {url?.title}
                 </span>
-                <span className="text-lg font-semibold text-blue-400 hover:underline cursor-pointer break-words whitespace-normal">
+                <span className="text-lg font-semibold text-violet-400 hover:underline cursor-pointer break-words whitespace-normal">
                     https://snipurl.co/{url.custom_url ? url?.custom_url : url?.short_url}
                 </span>
                 <span className=" inline font-md items-center hover:underline cursor-pointer truncate truncate-ellipsis">
@@ -61,13 +61,13 @@ const UrlCard = ({ url, fetchUrl }) => {
                 </span>
             </Link>
             <div className="flex gap-2 self-start">
-                <Button className="bg-slate-700" onClick={handleCopy}>
+                <Button className="bg-[#171717] hover:bg-[#0e0e0e]" onClick={handleCopy}>
                     {copied ? <Check size={"18"} /> : <Copy size={"18"} />}
                 </Button>
-                <Button className="bg-slate-700" onClick={downloadQR}>
+                <Button className="bg-[#171717] hover:bg-[#0e0e0e]" onClick={downloadQR}>
                     <Download size={"18"} />
                 </Button>
-                <Button className="bg-slate-700" onClick={() => { fnDelete().then(() => fetchUrl()) }}>
+                <Button className="bg-[#171717] hover:bg-[#0e0e0e]" onClick={() => { fnDelete().then(() => fetchUrl()) }}>
                     {loadingDelete ? <BeatLoader size={5} color="white" /> : <Trash2 size={"18"} />}
                 </Button>
             </div>

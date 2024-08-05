@@ -66,7 +66,7 @@ const Header = () => {
               </DropdownMenu>
             ) : (
 
-              <Button className="font-poppins text-black px-10 font-semibold" variant="outline" onClick={() => { navigate("/auth") }}>Login</Button>
+              <Button className="font-poppins w-20 sm:w-32 text-black px-10 font-semibold" variant="outline" onClick={() => { navigate("/auth") }}>Login</Button>
             )
           }
         </div>
