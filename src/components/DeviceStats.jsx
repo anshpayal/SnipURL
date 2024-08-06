@@ -1,11 +1,5 @@
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
-const data01 = [
-    { name: "Group A", value: 400 },
-    { name: "Group B", value: 300 },
-    { name: "Group C", value: 300 },
-    { name: "Group D", value: 200 }
-];
 
 const COLORS = ['#8884d8', '#475569', '#FFBB28',];
 

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
-import Logo from "../snipurl-logo.png";
+import Logo from "../Untitled-design.png";
 const Footer = () => {
   return (
-    <footer className="bg-[#212121] text-white flex flex-col sm:flex-row justify-between sm:px-16 px-6 items-center border-t border-slate-400">
+    <footer className="bg-[#212121] text-white flex flex-col sm:flex-row justify-between sm:px-16 px-6 items-center border-t border-white">
       <Link to="/">
       <span className="flex justify-center items-center ">
-        <img src={Logo} className=" w-[50px] h-[40px] mr-2"/>
+        <img src={Logo} className=" w-[55px] h-[50px] mr-2"/>
         <p className=" tracking-wide py-10 text-white font-poppins font-semibold text-[16px] sm:text-[20px]">SNIP | URL </p>
       </span>
       </Link>

@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { LinkIcon, LogOut } from "lucide-react"
-import Logo from "../snipurl-logo.png";
+import Logo from "../Untitled-design.png";
 import { UrlState } from "@/Context"
 import useFetch from "@/Hooks/useFetch"
 import { logout } from "@/db/apiAuth"
@@ -30,7 +30,7 @@ const Header = () => {
       <header className=" h-[75px] bg-[#212121] flex items-center justify-between sm:px-16 px-6 ">
         <Link to="/">
           <span className="flex justify-center items-center ">
-            <img src={Logo} className=" w-[50px] h-[40px] mr-2" />
+            <img src={Logo} className=" w-[55px] h-[50px]" />
             <p className=" tracking-wide py-10 font-poppins font-semibold text-[16px] sm:text-[20px]">SNIP | URL </p>
           </span>
         </Link>

@@ -22,7 +22,7 @@ const LocationStats = ({ stats }) => {
         <LineChart width={500} height={300} data={cities.slice(0,5)}>
           <XAxis dataKey="city" padding={{ left: 30, right: 30 }} />
           <YAxis />
-          <Tooltip labelStyle={{color:"green"}} />
+          <Tooltip labelStyle={{color:"green",}} />
           <Legend />
           <Line
             type="monotone"
