@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { LinkIcon, LogOut } from "lucide-react"
-import Logo from "../Untitled-design.png";
+import Logo from "../Logo.png";
 import { UrlState } from "@/Context"
 import useFetch from "@/Hooks/useFetch"
 import { logout } from "@/db/apiAuth"
