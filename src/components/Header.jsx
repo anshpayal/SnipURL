@@ -30,7 +30,7 @@ const Header = () => {
       <header className=" h-[75px] bg-[#212121] flex items-center justify-between sm:px-16 px-6 ">
         <Link to="/">
           <span className="flex justify-center items-center ">
-            <img src={Logo} className=" w-[55px] h-[50px]" />
+            <img src={Logo} className=" w-[45px] h-[40px]" />
             <p className=" tracking-wide py-10 font-poppins font-semibold text-[16px] sm:text-[20px]">SNIP | URL </p>
           </span>
         </Link>
